@@ -1,0 +1,40 @@
+################## LDV servers and can be accessed in external network ##################
+# 64 Core Threadripper #1
+Host ldv-3090-ws01
+  HostName fred01.clients.eikon.tum.de
+
+# employer desktop
+Host ldv-titanx-ws01
+  HostName jo.clients.ldv.ei.tum.de
+
+# employer desktop
+Host ldv-titanx-ws02
+  HostName tatavarty.clients.ldv.ei.tum.de
+
+# dual 2060 super workstation
+Host ldv-2060-ws01
+  HostName fred02.clients.eikon.tum.de
+
+# dual 2060 super workstation
+Host ldv-2060-ws02
+  HostName oelbaum.clients.ldv.ei.tum.de
+
+# 2060 super workstation
+Host ldv-2060-ws03
+  HostName hpc01.clients.eikon.tum.de
+
+# 2060 super workstation
+Host ldv-2060-ws04
+  HostName hpc02.clients.eikon.tum.de
+
+# 2060 super workstation
+Host ldv-2060-ws05
+  HostName hpc03.clients.eikon.tum.de
+
+# 2060 super workstation
+Host ldv-2060-ws06
+  HostName hpc05.clients.eikon.tum.de
+
+################## fortiss server and muss be accessed in the fortiss network ##################
+Host fortiss-2080-ws01
+  HostName 10.200.4.19

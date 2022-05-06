@@ -1,0 +1,42 @@
+#!/bin/bash
+
+USERNAME=ga63vuf
+HOSTNAMES="
+ldv-3090-ws01
+ldv-titanx-ws01
+ldv-titanx-ws02
+ldv-2060-ws01
+ldv-2060-ws02
+ldv-2060-ws03
+ldv-2060-ws04
+ldv-2060-ws05
+ldv-2060-ws06
+"
+
+# currently not reachable
+# hpc07.clients.eikon.tum.de
+# hpc10.clients.eikon.tum.de
+# meyer.clients.ldv.ei.tum.de
+# yelva.clients.ldv.ei.tum.de
+
+# Not with a available GPU
+# hpc06.clients.eikon.tum.de
+# hpc08.clients.eikon.tum.de
+# hpc09.clients.eikon.tum.de
+# hpc10.clients.eikon.tum.de
+# hpc11.clients.eikon.tum.de
+# hpc12.clients.eikon.tum.de
+# hpc13.clients.eikon.tum.de
+# hpc14.clients.eikon.tum.de
+# hpc15.clients.eikon.tum.de
+# slu01.clients.eikon.tum.de
+# slu02.clients.eikon.tum.de
+# slu03.clients.eikon.tum.de
+# fred03.clients.eikon.tum.de
+# thabigt.clients.ldv.ei.tum.de
+
+SCRIPT="docker exec ga63vuf screen -ls"
+for HOSTNAME in ${HOSTNAMES} ; do
+  echo ${HOSTNAME}
+  ssh -l ${USERNAME} ${HOSTNAME} "${SCRIPT}"
+done
