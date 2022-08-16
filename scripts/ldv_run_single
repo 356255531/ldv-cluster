@@ -1,0 +1,6 @@
+#!/bin/bash
+
+USERNAME=ga63vuf
+
+echo "$1"
+ssh ${USERNAME}@"$1" "${@:2}"
