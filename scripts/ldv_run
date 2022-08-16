@@ -2,15 +2,16 @@
 
 USERNAME=ga63vuf
 HOSTNAMES="
-ldv-3090-ws01
-ldv-titanx-ws01
-ldv-titanx-ws02
-ldv-2060-ws01
-ldv-2060-ws02
-ldv-2060-ws03
-ldv-2060-ws04
-ldv-2060-ws05
-ldv-2060-ws06
+3090-ws01
+3090-ws02
+titanx-ws01
+titanx-ws02
+dual-2060-ws01
+2060-ws01
+2060-ws02
+2060-ws03
+2060-ws04
+2060-ws05
 "
 
 # currently not reachable
@@ -35,8 +36,7 @@ ldv-2060-ws06
 # fred03.clients.eikon.tum.de
 # thabigt.clients.ldv.ei.tum.de
 
-SCRIPT="docker exec ga63vuf pkill screen"
 for HOSTNAME in ${HOSTNAMES} ; do
   echo ${HOSTNAME}
-  ssh -l ${USERNAME} ${HOSTNAME} "${SCRIPT}"
+  ssh ${USERNAME}@${HOSTNAME} "$@"
 done
